@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="LecturesController POST #create with invalid params" tests="1" time="0.00579" failures="0" errors="0" skipped="1" timestamp="2020-05-16T15:58:41+05:30">
+  <testcase name="LecturesController POST #create with invalid params returns a success response (i.e. to display the 'new' template) (PENDING)" time="0.005438">
+    <skipped/>
+  </testcase>
+</testsuite>

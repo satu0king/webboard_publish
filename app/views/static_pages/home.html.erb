@@ -1,0 +1,114 @@
+<%= provide(:title, "Home") %>
+
+<div class="hero is-dark is-medium">
+  <div class="hero-body">
+    <div class="container is-centered">
+      <h1>WebBoard</h1>
+      <h4>A Whiteboard for the Modern Web</h4>
+      <br />
+      <%= link_to "Launch WebBoard", launch_board_path, class: "button is-danger is-medium", target: '_blank' %>
+      <%= link_to "Explore", index_path, class: "button is-danger is-medium", target: '_blank' %>
+    </div>
+  </div>
+</div>
+<br>
+<div class="container">
+	<div class="columns is-multiline" id="courseList">
+
+    </div>
+</div>
+
+<script src="/js/sweetalert.min.js"></script>
+<script>
+    if(localStorage.getItem("recoverLogin") !== null) {
+
+      swal("You have unsaved Boards in your system. Do you want to load it?",{
+        dangerMode: true,
+        buttons : {
+            cancel : true,
+            confirm : {
+                text: 'Load'
+            }
+        }
+        }).then( function(value){
+            if(value){
+              window.location.href = '/board';
+            } else {
+              localStorage.removeItem("recoverLogin");
+            }
+        });
+      }
+</script>
+<script>
+  if(localStorage.getItem("failedSave")) {
+    swal("Some boards were not saved in our server due to Network error. Do you want to load it and save it?",{
+      dangerMode: true,
+      buttons : {
+          cancel : true,
+          confirm : {
+              text: 'Load'
+          }
+      }
+      }).then( function(value){
+          if(value){
+            window.location.href = '/board';
+          } else {
+            localStorage.removeItem("failedSave");
+            }
+      });
+    }
+</script>
+<script>
+  if(document.getElementById("courseList") !== null) {
+    var courses = document.getElementById("courseList");
+    var list = JSON.parse(localStorage.getItem("Courses"));
+    var arr = [];
+    if(list.length !== courses.childNodes.length) {
+      for(var i = 0; i < list.length; i++) {
+        var flag = 0;
+        for(var j=0;j<arr.length;j++){
+            if(arr[j] === list[i][0]) flag = 1;
+        }
+        if(flag == 0){
+            var div1 = document.createElement("div");
+            div1.setAttribute("class", "column is-3");
+            var div2 = document.createElement("div");
+            div2.setAttribute("class", "card has-shadow");
+
+            var img1 = document.createElement("img");
+            img1.setAttribute("class", "card-image");
+            img1.setAttribute("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf1PRVw8JpQaguwC8zW4Fnvcl0Rdi-IuXjHq0qHFNBxrsH5r5OxA");
+
+            var div3 = document.createElement("div");
+            div3.setAttribute("class", "card-header");
+            var div4 = document.createElement("div");
+            div4.setAttribute("class", "card-footer");
+
+            var div5 = document.createElement("div");
+            div5.setAttribute("class", "card-header-title is-centered");
+
+            var h51 = document.createElement("h5");
+            h51.innerHTML = list[i][1];
+
+
+            var a = document.createElement("a");
+            a.setAttribute("href", "/courses/"+list[i][0].toString()+"/lectures");
+            a.setAttribute("class", "card-footer-item button is-info is-small");
+            a.innerHTML = "View Lectures";
+
+            div4.appendChild(a);
+            div5.appendChild(h51);
+            div3.appendChild(div5);
+            div2.appendChild(img1);
+            div2.appendChild(div3);
+            div2.appendChild(div4);
+            div1.appendChild(div2);
+
+            courses.appendChild(div1);
+            arr.push(list[i][0]);
+        }
+
+      }
+    }
+  }
+</script>

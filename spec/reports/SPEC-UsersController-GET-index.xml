@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="UsersController GET #index" tests="1" time="0.008267" failures="0" errors="0" skipped="1" timestamp="2020-05-16T15:58:42+05:30">
+  <testcase name="UsersController GET #index returns a success response (PENDING)" time="0.007329">
+    <skipped/>
+  </testcase>
+</testsuite>

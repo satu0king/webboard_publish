@@ -1,0 +1,36 @@
+<%= provide(:title, "Create New") %>
+<h1>Create New Lecture</h1>
+
+<script>
+    function CreateCourseFunction() {
+    var x = document.getElementById("myDIV");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+
+    }
+</script>
+
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(:lecture) do |f| %>
+    <%= f.label "Lecture Name" %>
+        <%= f.text_field :name, value: nil, placeholder: :name, class: 'form-control' %>
+    <div style="border: solid; padding-left: 30px;padding-right: 30px;padding-top: 10px;">
+        <%= f.label "Choose existing course" %>
+        <%= f.collection_select :course_id, @courses, :id, :name, :include_blank => 'Choose your course', value: nil %>
+        <h1>OR</h1>
+        <button onclick="CreateCourseFunction()" class="btn btn-primary" type="button">Create New Course</button>
+        <div id="myDIV" style="display: none;padding-top: 5px;"><%= f.text_field :course_name, value: nil, class: 'form-control' %></div><br><br>
+    </div>
+        <br>
+        
+        <%= f.submit "Create Lecture", class: "btn btn-primary" %>
+    <% end %>
+  </div> 
+
+
+</div>

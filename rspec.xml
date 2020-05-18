@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="rspec" tests="79" skipped="33" failures="36" errors="0" time="2.021171" timestamp="2020-05-16T16:15:46+05:30" hostname="Satvik-MacBook-Pro.local">
+<properties>
+<property name="seed" value="29146"/>
+</properties>
+<testcase classname="spec.controllers.courses_controller_spec" name="CoursesController GET #index returns a success response" file="./spec/controllers/courses_controller_spec.rb" time="0.011221"><skipped/></testcase>
+<testcase classname="spec.controllers.courses_controller_spec" name="CoursesController GET #show returns a success response" file="./spec/controllers/courses_controller_spec.rb" time="0.004231"><skipped/></testcase>
+<testcase classname="spec.controllers.courses_controller_spec" name="CoursesController GET #new returns a success response" file="./spec/controllers/courses_controller_spec.rb" time="0.035908"></testcase>
+<testcase classname="spec.controllers.courses_controller_spec" name="CoursesController GET #edit returns a success response" file="./spec/controllers/courses_controller_spec.rb" time="0.004452"><skipped/></testcase>
+<testcase classname="spec.controllers.courses_controller_spec" name="CoursesController POST #create with valid params creates a new Course" file="./spec/controllers/courses_controller_spec.rb" time="0.009189"><skipped/></testcase>
+<testcase classname="spec.controllers.courses_controller_spec" name="CoursesController POST #create with valid params redirects to the created course" file="./spec/controllers/courses_controller_spec.rb" time="0.003713"><skipped/></testcase>
+<testcase classname="spec.controllers.courses_controller_spec" name="CoursesController POST #create with invalid params returns a success response (i.e. to display the &apos;new&apos; template)" file="./spec/controllers/courses_controller_spec.rb" time="0.004028"><skipped/></testcase>
+<testcase classname="spec.controllers.courses_controller_spec" name="CoursesController PUT #update with valid params updates the requested course" file="./spec/controllers/courses_controller_spec.rb" time="0.003894"><skipped/></testcase>
+<testcase classname="spec.controllers.courses_controller_spec" name="CoursesController PUT #update with valid params redirects to the course" file="./spec/controllers/courses_controller_spec.rb" time="0.004179"><skipped/></testcase>
+<testcase classname="spec.controllers.courses_controller_spec" name="CoursesController PUT #update with invalid params returns a success response (i.e. to display the &apos;edit&apos; template)" file="./spec/controllers/courses_controller_spec.rb" time="0.003584"><skipped/></testcase>
+<testcase classname="spec.controllers.courses_controller_spec" name="CoursesController DELETE #destroy destroys the requested course" file="./spec/controllers/courses_controller_spec.rb" time="0.003626"><skipped/></testcase>
+<testcase classname="spec.controllers.courses_controller_spec" name="CoursesController DELETE #destroy redirects to the courses list" file="./spec/controllers/courses_controller_spec.rb" time="0.003788"><skipped/></testcase>
+<testcase classname="spec.controllers.lectures_controller_spec" name="LecturesController GET #index returns a success response" file="./spec/controllers/lectures_controller_spec.rb" time="0.007983"><skipped/></testcase>
+<testcase classname="spec.controllers.lectures_controller_spec" name="LecturesController GET #show returns a success response" file="./spec/controllers/lectures_controller_spec.rb" time="0.004710"><skipped/></testcase>
+<testcase classname="spec.controllers.lectures_controller_spec" name="LecturesController GET #new returns a success response" file="./spec/controllers/lectures_controller_spec.rb" time="0.004809"><failure message="No route matches {:action=&gt;&quot;new&quot;, :controller=&gt;&quot;lectures&quot;}" type="ActionController::UrlGenerationError">Failure/Error: get :new, params: {}, session: valid_session
+
+ActionController::UrlGenerationError:
+  No route matches {:action=&gt;&quot;new&quot;, :controller=&gt;&quot;lectures&quot;}
+./spec/controllers/lectures_controller_spec.rb:62:in `block (3 levels) in &lt;top (required)&gt;&apos;</failure></testcase>
+<testcase classname="spec.controllers.lectures_controller_spec" name="LecturesController GET #edit returns a success response" file="./spec/controllers/lectures_controller_spec.rb" time="0.004348"><skipped/></testcase>
+<testcase classname="spec.controllers.lectures_controller_spec" name="LecturesController POST #create with valid params creates a new Lecture" file="./spec/controllers/lectures_controller_spec.rb" time="0.009350"><skipped/></testcase>
+<testcase classname="spec.controllers.lectures_controller_spec" name="LecturesController POST #create with valid params redirects to the created lecture" file="./spec/controllers/lectures_controller_spec.rb" time="0.003820"><skipped/></testcase>
+<testcase classname="spec.controllers.lectures_controller_spec" name="LecturesController POST #create with invalid params returns a success response (i.e. to display the &apos;new&apos; template)" file="./spec/controllers/lectures_controller_spec.rb" time="0.003892"><skipped/></testcase>
+<testcase classname="spec.controllers.lectures_controller_spec" name="LecturesController PUT #update with valid params updates the requested lecture" file="./spec/controllers/lectures_controller_spec.rb" time="0.003926"><skipped/></testcase>
+<testcase classname="spec.controllers.lectures_controller_spec" name="LecturesController PUT #update with valid params redirects to the lecture" file="./spec/controllers/lectures_controller_spec.rb" time="0.004048"><skipped/></testcase>
+<testcase classname="spec.controllers.lectures_controller_spec" name="LecturesController PUT #update with invalid params returns a success response (i.e. to display the &apos;edit&apos; template)" file="./spec/controllers/lectures_controller_spec.rb" time="0.003666"><skipped/></testcase>
+<testcase classname="spec.controllers.lectures_controller_spec" name="LecturesController DELETE #destroy destroys the requested lecture" file="./spec/controllers/lectures_controller_spec.rb" time="0.003965"><skipped/></testcase>
+<testcase classname="spec.controllers.lectures_controller_spec" name="LecturesController DELETE #destroy redirects to the lectures list" file="./spec/controllers/lectures_controller_spec.rb" time="0.003755"><skipped/></testcase>
+<testcase classname="spec.controllers.users_controller_spec" name="UsersController GET #index returns a success response" file="./spec/controllers/users_controller_spec.rb" time="0.003835"><skipped/></testcase>
+<testcase classname="spec.controllers.users_controller_spec" name="UsersController GET #show returns a success response" file="./spec/controllers/users_controller_spec.rb" time="0.004452"><skipped/></testcase>
+<testcase classname="spec.controllers.users_controller_spec" name="UsersController GET #new returns a success response" file="./spec/controllers/users_controller_spec.rb" time="0.004496"><failure message="No route matches {:action=&gt;&quot;new&quot;, :controller=&gt;&quot;users&quot;}" type="ActionController::UrlGenerationError">Failure/Error: get :new, params: {}, session: valid_session
+
+ActionController::UrlGenerationError:
+  No route matches {:action=&gt;&quot;new&quot;, :controller=&gt;&quot;users&quot;}
+./spec/controllers/users_controller_spec.rb:62:in `block (3 levels) in &lt;top (required)&gt;&apos;</failure></testcase>
+<testcase classname="spec.controllers.users_controller_spec" name="UsersController GET #edit returns a success response" file="./spec/controllers/users_controller_spec.rb" time="0.004131"><skipped/></testcase>
+<testcase classname="spec.controllers.users_controller_spec" name="UsersController POST #create with valid params creates a new User" file="./spec/controllers/users_controller_spec.rb" time="0.009699"><skipped/></testcase>
+<testcase classname="spec.controllers.users_controller_spec" name="UsersController POST #create with valid params redirects to the created user" file="./spec/controllers/users_controller_spec.rb" time="0.004038"><skipped/></testcase>
+<testcase classname="spec.controllers.users_controller_spec" name="UsersController POST #create with invalid params returns a success response (i.e. to display the &apos;new&apos; template)" file="./spec/controllers/users_controller_spec.rb" time="0.004049"><skipped/></testcase>
+<testcase classname="spec.controllers.users_controller_spec" name="UsersController PUT #update with valid params updates the requested user" file="./spec/controllers/users_controller_spec.rb" time="0.004217"><skipped/></testcase>
+<testcase classname="spec.controllers.users_controller_spec" name="UsersController PUT #update with valid params redirects to the user" file="./spec/controllers/users_controller_spec.rb" time="0.004071"><skipped/></testcase>
+<testcase classname="spec.controllers.users_controller_spec" name="UsersController PUT #update with invalid params returns a success response (i.e. to display the &apos;edit&apos; template)" file="./spec/controllers/users_controller_spec.rb" time="0.004215"><skipped/></testcase>
+<testcase classname="spec.controllers.users_controller_spec" name="UsersController DELETE #destroy destroys the requested user" file="./spec/controllers/users_controller_spec.rb" time="0.003655"><skipped/></testcase>
+<testcase classname="spec.controllers.users_controller_spec" name="UsersController DELETE #destroy redirects to the users list" file="./spec/controllers/users_controller_spec.rb" time="0.003790"><skipped/></testcase>
+<testcase classname="spec.requests.courses_spec" name="Courses GET /index works! " file="./spec/requests/courses_spec.rb" time="0.602982"></testcase>
+<testcase classname="spec.requests.lectures_spec" name="Lectures GET /lectures works! (now write some real specs)" file="./spec/requests/lectures_spec.rb" time="0.004146"><failure message="undefined local variable or method `lectures_path&apos; for #&lt;RSpec::ExampleGroups::Lectures::GETLectures:0x00007f8a4b608038&gt;" type="NameError">Failure/Error: get lectures_path
+
+NameError:
+  undefined local variable or method `lectures_path&apos; for #&lt;RSpec::ExampleGroups::Lectures::GETLectures:0x00007f8a4b608038&gt;
+./spec/requests/lectures_spec.rb:6:in `block (3 levels) in &lt;top (required)&gt;&apos;</failure></testcase>
+<testcase classname="spec.requests.users_spec" name="Users GET /users works! (now write some real specs)" file="./spec/requests/users_spec.rb" time="0.003981"><failure message="undefined local variable or method `users_path&apos; for #&lt;RSpec::ExampleGroups::Users::GETUsers:0x00007f8a42f3d698&gt;" type="NameError">Failure/Error: get users_path
+
+NameError:
+  undefined local variable or method `users_path&apos; for #&lt;RSpec::ExampleGroups::Users::GETUsers:0x00007f8a42f3d698&gt;
+./spec/requests/users_spec.rb:6:in `block (3 levels) in &lt;top (required)&gt;&apos;</failure></testcase>
+<testcase classname="spec.requests.votes_spec" name="Votes GET /votes works! (now write some real specs)" file="./spec/requests/votes_spec.rb" time="0.003527"><failure message="undefined local variable or method `votes_path&apos; for #&lt;RSpec::ExampleGroups::Votes::GETVotes:0x00007f8a4c042d78&gt;" type="NameError">Failure/Error: get votes_path
+
+NameError:
+  undefined local variable or method `votes_path&apos; for #&lt;RSpec::ExampleGroups::Votes::GETVotes:0x00007f8a4c042d78&gt;
+./spec/requests/votes_spec.rb:6:in `block (3 levels) in &lt;top (required)&gt;&apos;</failure></testcase>
+<testcase classname="spec.routing.courses_routing_spec" name="CoursesController routing routes to #new" file="./spec/routing/courses_routing_spec.rb" time="0.004035"></testcase>
+<testcase classname="spec.routing.courses_routing_spec" name="CoursesController routing routes to #show" file="./spec/routing/courses_routing_spec.rb" time="0.004401"></testcase>
+<testcase classname="spec.routing.courses_routing_spec" name="CoursesController routing routes to #edit" file="./spec/routing/courses_routing_spec.rb" time="0.004380"></testcase>
+<testcase classname="spec.routing.courses_routing_spec" name="CoursesController routing routes to #create" file="./spec/routing/courses_routing_spec.rb" time="0.004814"></testcase>
+<testcase classname="spec.routing.courses_routing_spec" name="CoursesController routing routes to #update via PUT" file="./spec/routing/courses_routing_spec.rb" time="0.005205"></testcase>
+<testcase classname="spec.routing.courses_routing_spec" name="CoursesController routing routes to #update via PATCH" file="./spec/routing/courses_routing_spec.rb" time="0.004723"></testcase>
+<testcase classname="spec.routing.courses_routing_spec" name="CoursesController routing routes to #destroy" file="./spec/routing/courses_routing_spec.rb" time="0.004677"></testcase>
+<testcase classname="spec.routing.lectures_routing_spec" name="LecturesController routing routes to #index" file="./spec/routing/lectures_routing_spec.rb" time="0.019363"><failure message="No route matches &quot;/lectures&quot;" type="RSpec::Expectations::ExpectationNotMetError">Failure/Error: expect(:get =&gt; &quot;/lectures&quot;).to route_to(&quot;lectures#index&quot;)
+  No route matches &quot;/lectures&quot;
+./spec/routing/lectures_routing_spec.rb:6:in `block (3 levels) in &lt;top (required)&gt;&apos;</failure></testcase>
+<testcase classname="spec.routing.lectures_routing_spec" name="LecturesController routing routes to #new" file="./spec/routing/lectures_routing_spec.rb" time="0.004094"><failure message="No route matches &quot;/lectures/new&quot;" type="RSpec::Expectations::ExpectationNotMetError">Failure/Error: expect(:get =&gt; &quot;/lectures/new&quot;).to route_to(&quot;lectures#new&quot;)
+  No route matches &quot;/lectures/new&quot;
+./spec/routing/lectures_routing_spec.rb:10:in `block (3 levels) in &lt;top (required)&gt;&apos;</failure></testcase>
+<testcase classname="spec.routing.lectures_routing_spec" name="LecturesController routing routes to #show" file="./spec/routing/lectures_routing_spec.rb" time="0.003072"><failure message="No route matches &quot;/lectures/1&quot;" type="RSpec::Expectations::ExpectationNotMetError">Failure/Error: expect(:get =&gt; &quot;/lectures/1&quot;).to route_to(&quot;lectures#show&quot;, :id =&gt; &quot;1&quot;)
+  No route matches &quot;/lectures/1&quot;
+./spec/routing/lectures_routing_spec.rb:14:in `block (3 levels) in &lt;top (required)&gt;&apos;</failure></testcase>
+<testcase classname="spec.routing.lectures_routing_spec" name="LecturesController routing routes to #edit" file="./spec/routing/lectures_routing_spec.rb" time="0.003101"><failure message="No route matches &quot;/lectures/1/edit&quot;" type="RSpec::Expectations::ExpectationNotMetError">Failure/Error: expect(:get =&gt; &quot;/lectures/1/edit&quot;).to route_to(&quot;lectures#edit&quot;, :id =&gt; &quot;1&quot;)
+  No route matches &quot;/lectures/1/edit&quot;
+./spec/routing/lectures_routing_spec.rb:18:in `block (3 levels) in &lt;top (required)&gt;&apos;</failure></testcase>
+<testcase classname="spec.routing.lectures_routing_spec" name="LecturesController routing routes to #create" file="./spec/routing/lectures_routing_spec.rb" time="0.003642"><failure message="No route matches &quot;/lectures&quot;" type="RSpec::Expectations::ExpectationNotMetError">Failure/Error: expect(:post =&gt; &quot;/lectures&quot;).to route_to(&quot;lectures#create&quot;)
+  No route matches &quot;/lectures&quot;
+./spec/routing/lectures_routing_spec.rb:23:in `block (3 levels) in &lt;top (required)&gt;&apos;</failure></testcase>
+<testcase classname="spec.routing.lectures_routing_spec" name="LecturesController routing routes to #update via PUT" file="./spec/routing/lectures_routing_spec.rb" time="0.005074"><failure message="No route matches &quot;/lectures/1&quot;" type="RSpec::Expectations::ExpectationNotMetError">Failure/Error: expect(:put =&gt; &quot;/lectures/1&quot;).to route_to(&quot;lectures#update&quot;, :id =&gt; &quot;1&quot;)
+  No route matches &quot;/lectures/1&quot;
+./spec/routing/lectures_routing_spec.rb:27:in `block (3 levels) in &lt;top (required)&gt;&apos;</failure></testcase>
+<testcase classname="spec.routing.lectures_routing_spec" name="LecturesController routing routes to #update via PATCH" file="./spec/routing/lectures_routing_spec.rb" time="0.005311"><failure message="No route matches &quot;/lectures/1&quot;" type="RSpec::Expectations::ExpectationNotMetError">Failure/Error: expect(:patch =&gt; &quot;/lectures/1&quot;).to route_to(&quot;lectures#update&quot;, :id =&gt; &quot;1&quot;)
+  No route matches &quot;/lectures/1&quot;
+./spec/routing/lectures_routing_spec.rb:31:in `block (3 levels) in &lt;top (required)&gt;&apos;</failure></testcase>
+<testcase classname="spec.routing.lectures_routing_spec" name="LecturesController routing routes to #destroy" file="./spec/routing/lectures_routing_spec.rb" time="0.003935"><failure message="No route matches &quot;/lectures/1&quot;" type="RSpec::Expectations::ExpectationNotMetError">Failure/Error: expect(:delete =&gt; &quot;/lectures/1&quot;).to route_to(&quot;lectures#destroy&quot;, :id =&gt; &quot;1&quot;)
+  No route matches &quot;/lectures/1&quot;
+./spec/routing/lectures_routing_spec.rb:35:in `block (3 levels) in &lt;top (required)&gt;&apos;</failure></testcase>
+<testcase classname="spec.routing.users_routing_spec" name="UsersController routing routes to #index" file="./spec/routing/users_routing_spec.rb" time="0.004058"><failure message="No route matches &quot;/users&quot;" type="RSpec::Expectations::ExpectationNotMetError">Failure/Error: expect(:get =&gt; &quot;/users&quot;).to route_to(&quot;users#index&quot;)
+  No route matches &quot;/users&quot;
+./spec/routing/users_routing_spec.rb:6:in `block (3 levels) in &lt;top (required)&gt;&apos;</failure></testcase>
+<testcase classname="spec.routing.users_routing_spec" name="UsersController routing routes to #new" file="./spec/routing/users_routing_spec.rb" time="0.003681"><failure message="No route matches &quot;/users/new&quot;" type="RSpec::Expectations::ExpectationNotMetError">Failure/Error: expect(:get =&gt; &quot;/users/new&quot;).to route_to(&quot;users#new&quot;)
+  No route matches &quot;/users/new&quot;
+./spec/routing/users_routing_spec.rb:10:in `block (3 levels) in &lt;top (required)&gt;&apos;</failure></testcase>
+<testcase classname="spec.routing.users_routing_spec" name="UsersController routing routes to #show" file="./spec/routing/users_routing_spec.rb" time="0.004084"></testcase>
+<testcase classname="spec.routing.users_routing_spec" name="UsersController routing routes to #edit" file="./spec/routing/users_routing_spec.rb" time="0.003784"><failure message="No route matches &quot;/users/1/edit&quot;" type="RSpec::Expectations::ExpectationNotMetError">Failure/Error: expect(:get =&gt; &quot;/users/1/edit&quot;).to route_to(&quot;users#edit&quot;, :id =&gt; &quot;1&quot;)
+  No route matches &quot;/users/1/edit&quot;
+./spec/routing/users_routing_spec.rb:18:in `block (3 levels) in &lt;top (required)&gt;&apos;</failure></testcase>
+<testcase classname="spec.routing.users_routing_spec" name="UsersController routing routes to #create" file="./spec/routing/users_routing_spec.rb" time="0.027356"><failure message="The recognized options &lt;{&quot;controller&quot;=&gt;&quot;registrations&quot;, &quot;action&quot;=&gt;&quot;create&quot;}&gt; did not match &lt;{&quot;controller&quot;=&gt;&quot;users&quot;, &quot;action&quot;=&gt;&quot;create&quot;}&gt;, difference:.
+--- expected
++++ actual
+@@ -1 +1 @@
+-{&quot;controller&quot;=&gt;&quot;users&quot;, &quot;action&quot;=&gt;&quot;create&quot;}
++{&quot;controller&quot;=&gt;&quot;registrations&quot;, &quot;action&quot;=&gt;&quot;create&quot;}
+" type="RSpec::Expectations::ExpectationNotMetError">Failure/Error: expect(:post =&gt; &quot;/users&quot;).to route_to(&quot;users#create&quot;)
+
+  The recognized options &lt;{&quot;controller&quot;=&gt;&quot;registrations&quot;, &quot;action&quot;=&gt;&quot;create&quot;}&gt; did not match &lt;{&quot;controller&quot;=&gt;&quot;users&quot;, &quot;action&quot;=&gt;&quot;create&quot;}&gt;, difference:.
+  --- expected
+  +++ actual
+  @@ -1 +1 @@
+  -{&quot;controller&quot;=&gt;&quot;users&quot;, &quot;action&quot;=&gt;&quot;create&quot;}
+  +{&quot;controller&quot;=&gt;&quot;registrations&quot;, &quot;action&quot;=&gt;&quot;create&quot;}
+./spec/routing/users_routing_spec.rb:23:in `block (3 levels) in &lt;top (required)&gt;&apos;</failure></testcase>
+<testcase classname="spec.routing.users_routing_spec" name="UsersController routing routes to #update via PUT" file="./spec/routing/users_routing_spec.rb" time="0.003895"><failure message="No route matches &quot;/users/1&quot;" type="RSpec::Expectations::ExpectationNotMetError">Failure/Error: expect(:put =&gt; &quot;/users/1&quot;).to route_to(&quot;users#update&quot;, :id =&gt; &quot;1&quot;)
+  No route matches &quot;/users/1&quot;
+./spec/routing/users_routing_spec.rb:27:in `block (3 levels) in &lt;top (required)&gt;&apos;</failure></testcase>
+<testcase classname="spec.routing.users_routing_spec" name="UsersController routing routes to #update via PATCH" file="./spec/routing/users_routing_spec.rb" time="0.003948"><failure message="No route matches &quot;/users/1&quot;" type="RSpec::Expectations::ExpectationNotMetError">Failure/Error: expect(:patch =&gt; &quot;/users/1&quot;).to route_to(&quot;users#update&quot;, :id =&gt; &quot;1&quot;)
+  No route matches &quot;/users/1&quot;
+./spec/routing/users_routing_spec.rb:31:in `block (3 levels) in &lt;top (required)&gt;&apos;</failure></testcase>
+<testcase classname="spec.routing.users_routing_spec" name="UsersController routing routes to #destroy" file="./spec/routing/users_routing_spec.rb" time="0.003365"><failure message="No route matches &quot;/users/1&quot;" type="RSpec::Expectations::ExpectationNotMetError">Failure/Error: expect(:delete =&gt; &quot;/users/1&quot;).to route_to(&quot;users#destroy&quot;, :id =&gt; &quot;1&quot;)
+  No route matches &quot;/users/1&quot;
+./spec/routing/users_routing_spec.rb:35:in `block (3 levels) in &lt;top (required)&gt;&apos;</failure></testcase>
+<testcase classname="spec.views.courses.edit" name="courses/edit renders the edit course form" file="./spec/views/courses/edit.html.erb_spec.rb" time="0.015500"><failure message="Validation failed: User must exist, Name can&apos;t be blank" type="ActiveRecord::RecordInvalid">Failure/Error: @course = assign(:course, Course.create!())
+
+ActiveRecord::RecordInvalid:
+  Validation failed: User must exist, Name can&apos;t be blank
+./spec/views/courses/edit.html.erb_spec.rb:5:in `block (2 levels) in &lt;top (required)&gt;&apos;</failure></testcase>
+<testcase classname="spec.views.courses.index" name="courses/index renders a list of courses" file="./spec/views/courses/index.html.erb_spec.rb" time="0.007340"><failure message="Validation failed: User must exist, Name can&apos;t be blank" type="ActiveRecord::RecordInvalid">Failure/Error: Course.create!(),
+
+ActiveRecord::RecordInvalid:
+  Validation failed: User must exist, Name can&apos;t be blank
+./spec/views/courses/index.html.erb_spec.rb:6:in `block (2 levels) in &lt;top (required)&gt;&apos;</failure></testcase>
+<testcase classname="spec.views.courses.new" name="courses/new renders new course form" file="./spec/views/courses/new.html.erb_spec.rb" time="0.218716"><failure message="Devise could not find the `Warden::Proxy` instance on your request environment.
+Make sure that your application is loading Devise and Warden as expected and that the `Warden::Manager` middleware is present in your middleware stack.
+If you are seeing this on one of your tests, ensure that your tests are either executing the Rails middleware stack or that your tests are using the `Devise::Test::ControllerHelpers` module to inject the `request.env[&apos;warden&apos;]` object for you." type="ActionView::Template::Error">Failure/Error: &lt;%= link_to &apos;Back&apos;, user_course_path(current_user), class:&quot;button is-medium is-primary&quot; %&gt;
+
+ActionView::Template::Error:
+  Devise could not find the `Warden::Proxy` instance on your request environment.
+  Make sure that your application is loading Devise and Warden as expected and that the `Warden::Manager` middleware is present in your middleware stack.
+  If you are seeing this on one of your tests, ensure that your tests are either executing the Rails middleware stack or that your tests are using the `Devise::Test::ControllerHelpers` module to inject the `request.env[&apos;warden&apos;]` object for you.
+/Users/shreya/.rvm/gems/ruby-2.5.1/gems/devise-4.6.2/lib/devise/controllers/helpers.rb:143:in `warden&apos;
+/Users/shreya/.rvm/gems/ruby-2.5.1/gems/devise-4.6.2/lib/devise/controllers/helpers.rb:126:in `current_user&apos;
+./app/views/courses/_form.html.erb:29:in `block in _app_views_courses__form_html_erb__1636309371688907645_70115973593900&apos;
+/Users/shreya/.rvm/gems/ruby-2.5.1/gems/haml-5.1.1/lib/haml/helpers/action_view_xss_mods.rb:7:in `with_output_buffer_with_haml_xss&apos;
+/Users/shreya/.rvm/gems/ruby-2.5.1/gems/haml-5.1.1/lib/haml/helpers/action_view_mods.rb:48:in `capture_with_haml&apos;
+./app/views/courses/_form.html.erb:1:in `_app_views_courses__form_html_erb__1636309371688907645_70115973593900&apos;
+/Users/shreya/.rvm/gems/ruby-2.5.1/gems/haml-5.1.1/lib/haml/helpers/action_view_mods.rb:15:in `render&apos;
+./app/views/courses/new.html.erb:4:in `_app_views_courses_new_html_erb___2516187715625061821_70115973582660&apos;
+/Users/shreya/.rvm/gems/ruby-2.5.1/gems/haml-5.1.1/lib/haml/helpers/action_view_mods.rb:15:in `render&apos;
+./spec/views/courses/new.html.erb_spec.rb:9:in `block (2 levels) in &lt;top (required)&gt;&apos;
+------------------
+--- Caused by: ---
+Devise::MissingWarden:
+  Devise could not find the `Warden::Proxy` instance on your request environment.
+  Make sure that your application is loading Devise and Warden as expected and that the `Warden::Manager` middleware is present in your middleware stack.
+  If you are seeing this on one of your tests, ensure that your tests are either executing the Rails middleware stack or that your tests are using the `Devise::Test::ControllerHelpers` module to inject the `request.env[&apos;warden&apos;]` object for you.
+  /Users/shreya/.rvm/gems/ruby-2.5.1/gems/devise-4.6.2/lib/devise/controllers/helpers.rb:143:in `warden&apos;</failure></testcase>
+<testcase classname="spec.views.courses.show" name="courses/show renders attributes in &lt;p&gt;" file="./spec/views/courses/show.html.erb_spec.rb" time="0.008638"><failure message="Validation failed: User must exist, Name can&apos;t be blank" type="ActiveRecord::RecordInvalid">Failure/Error: @course = assign(:course, Course.create!())
+
+ActiveRecord::RecordInvalid:
+  Validation failed: User must exist, Name can&apos;t be blank
+./spec/views/courses/show.html.erb_spec.rb:5:in `block (2 levels) in &lt;top (required)&gt;&apos;</failure></testcase>
+<testcase classname="spec.views.lectures.edit" name="lectures/edit renders the edit lecture form" file="./spec/views/lectures/edit.html.erb_spec.rb" time="0.019569"><failure message="Validation failed: Course must exist, Name can&apos;t be blank" type="ActiveRecord::RecordInvalid">Failure/Error: @lecture = assign(:lecture, Lecture.create!())
+
+ActiveRecord::RecordInvalid:
+  Validation failed: Course must exist, Name can&apos;t be blank
+./spec/views/lectures/edit.html.erb_spec.rb:5:in `block (2 levels) in &lt;top (required)&gt;&apos;</failure></testcase>
+<testcase classname="spec.views.lectures.index" name="lectures/index renders a list of lectures" file="./spec/views/lectures/index.html.erb_spec.rb" time="0.008724"><failure message="Validation failed: Course must exist, Name can&apos;t be blank" type="ActiveRecord::RecordInvalid">Failure/Error: Lecture.create!(),
+
+ActiveRecord::RecordInvalid:
+  Validation failed: Course must exist, Name can&apos;t be blank
+./spec/views/lectures/index.html.erb_spec.rb:6:in `block (2 levels) in &lt;top (required)&gt;&apos;</failure></testcase>
+<testcase classname="spec.views.lectures.new" name="lectures/new renders new lecture form" file="./spec/views/lectures/new.html.erb_spec.rb" time="0.070941"><failure message="Devise could not find the `Warden::Proxy` instance on your request environment.
+Make sure that your application is loading Devise and Warden as expected and that the `Warden::Manager` middleware is present in your middleware stack.
+If you are seeing this on one of your tests, ensure that your tests are either executing the Rails middleware stack or that your tests are using the `Devise::Test::ControllerHelpers` module to inject the `request.env[&apos;warden&apos;]` object for you." type="ActionView::Template::Error">Failure/Error: &lt;% if user_signed_in? and current_user  == @course.user %&gt;
+
+ActionView::Template::Error:
+  Devise could not find the `Warden::Proxy` instance on your request environment.
+  Make sure that your application is loading Devise and Warden as expected and that the `Warden::Manager` middleware is present in your middleware stack.
+  If you are seeing this on one of your tests, ensure that your tests are either executing the Rails middleware stack or that your tests are using the `Devise::Test::ControllerHelpers` module to inject the `request.env[&apos;warden&apos;]` object for you.
+/Users/shreya/.rvm/gems/ruby-2.5.1/gems/devise-4.6.2/lib/devise/controllers/helpers.rb:143:in `warden&apos;
+/Users/shreya/.rvm/gems/ruby-2.5.1/gems/devise-4.6.2/lib/devise/controllers/helpers.rb:126:in `current_user&apos;
+/Users/shreya/.rvm/gems/ruby-2.5.1/gems/devise-4.6.2/lib/devise/controllers/helpers.rb:122:in `user_signed_in?&apos;
+./app/views/lectures/new.html.erb:2:in `_app_views_lectures_new_html_erb___2303880651884841654_70115915820180&apos;
+/Users/shreya/.rvm/gems/ruby-2.5.1/gems/haml-5.1.1/lib/haml/helpers/action_view_mods.rb:15:in `render&apos;
+./spec/views/lectures/new.html.erb_spec.rb:9:in `block (2 levels) in &lt;top (required)&gt;&apos;
+------------------
+--- Caused by: ---
+Devise::MissingWarden:
+  Devise could not find the `Warden::Proxy` instance on your request environment.
+  Make sure that your application is loading Devise and Warden as expected and that the `Warden::Manager` middleware is present in your middleware stack.
+  If you are seeing this on one of your tests, ensure that your tests are either executing the Rails middleware stack or that your tests are using the `Devise::Test::ControllerHelpers` module to inject the `request.env[&apos;warden&apos;]` object for you.
+  /Users/shreya/.rvm/gems/ruby-2.5.1/gems/devise-4.6.2/lib/devise/controllers/helpers.rb:143:in `warden&apos;</failure></testcase>
+<testcase classname="spec.views.lectures.show" name="lectures/show renders attributes in &lt;p&gt;" file="./spec/views/lectures/show.html.erb_spec.rb" time="0.008574"><failure message="Validation failed: Course must exist, Name can&apos;t be blank" type="ActiveRecord::RecordInvalid">Failure/Error: @lecture = assign(:lecture, Lecture.create!())
+
+ActiveRecord::RecordInvalid:
+  Validation failed: Course must exist, Name can&apos;t be blank
+./spec/views/lectures/show.html.erb_spec.rb:5:in `block (2 levels) in &lt;top (required)&gt;&apos;</failure></testcase>
+<testcase classname="spec.views.users.edit" name="users/edit renders the edit user form" file="./spec/views/users/edit.html.erb_spec.rb" time="0.008572"><failure message="Validation failed: Email can&apos;t be blank, Password can&apos;t be blank" type="ActiveRecord::RecordInvalid">Failure/Error: @user = assign(:user, User.create!())
+
+ActiveRecord::RecordInvalid:
+  Validation failed: Email can&apos;t be blank, Password can&apos;t be blank
+./spec/views/users/edit.html.erb_spec.rb:5:in `block (2 levels) in &lt;top (required)&gt;&apos;</failure></testcase>
+<testcase classname="spec.views.users.index" name="users/index renders a list of users" file="./spec/views/users/index.html.erb_spec.rb" time="0.008383"><failure message="Validation failed: Email can&apos;t be blank, Password can&apos;t be blank" type="ActiveRecord::RecordInvalid">Failure/Error: User.create!(),
+
+ActiveRecord::RecordInvalid:
+  Validation failed: Email can&apos;t be blank, Password can&apos;t be blank
+./spec/views/users/index.html.erb_spec.rb:6:in `block (2 levels) in &lt;top (required)&gt;&apos;</failure></testcase>
+<testcase classname="spec.views.users.new" name="users/new renders new user form" file="./spec/views/users/new.html.erb_spec.rb" time="0.137729"><failure message="Missing template users/new with {:locale=&gt;[:en], :formats=&gt;[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=&gt;[], :handlers=&gt;[:raw, :erb, :html, :builder, :ruby, :haml, :coffee, :jbuilder]}. Searched in:
+  * &quot;/Users/shreya/github/Webboard/app/views&quot;
+  * &quot;/Users/shreya/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views&quot;
+  * &quot;/Users/shreya/.rvm/gems/ruby-2.5.1/gems/kaminari-core-1.1.1/app/views&quot;
+  * &quot;/Users/shreya/.rvm/gems/ruby-2.5.1/gems/devise-4.6.2/app/views&quot;
+" type="ActionView::MissingTemplate">Failure/Error: render
+
+ActionView::MissingTemplate:
+  Missing template users/new with {:locale=&gt;[:en], :formats=&gt;[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=&gt;[], :handlers=&gt;[:raw, :erb, :html, :builder, :ruby, :haml, :coffee, :jbuilder]}. Searched in:
+    * &quot;/Users/shreya/github/Webboard/app/views&quot;
+    * &quot;/Users/shreya/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views&quot;
+    * &quot;/Users/shreya/.rvm/gems/ruby-2.5.1/gems/kaminari-core-1.1.1/app/views&quot;
+    * &quot;/Users/shreya/.rvm/gems/ruby-2.5.1/gems/devise-4.6.2/app/views&quot;
+/Users/shreya/.rvm/gems/ruby-2.5.1/gems/haml-5.1.1/lib/haml/helpers/action_view_mods.rb:15:in `render&apos;
+./spec/views/users/new.html.erb_spec.rb:9:in `block (2 levels) in &lt;top (required)&gt;&apos;</failure></testcase>
+<testcase classname="spec.views.users.show" name="users/show renders attributes in &lt;p&gt;" file="./spec/views/users/show.html.erb_spec.rb" time="0.007609"><failure message="Validation failed: Email can&apos;t be blank, Password can&apos;t be blank" type="ActiveRecord::RecordInvalid">Failure/Error: @user = assign(:user, User.create!())
+
+ActiveRecord::RecordInvalid:
+  Validation failed: Email can&apos;t be blank, Password can&apos;t be blank
+./spec/views/users/show.html.erb_spec.rb:5:in `block (2 levels) in &lt;top (required)&gt;&apos;</failure></testcase>
+<testcase classname="spec.views.votes.edit" name="votes/edit renders the edit vote form" file="./spec/views/votes/edit.html.erb_spec.rb" time="0.144574"><failure message="Missing template votes/edit with {:locale=&gt;[:en], :formats=&gt;[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=&gt;[], :handlers=&gt;[:raw, :erb, :html, :builder, :ruby, :haml, :coffee, :jbuilder]}. Searched in:
+  * &quot;/Users/shreya/github/Webboard/app/views&quot;
+  * &quot;/Users/shreya/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views&quot;
+  * &quot;/Users/shreya/.rvm/gems/ruby-2.5.1/gems/kaminari-core-1.1.1/app/views&quot;
+  * &quot;/Users/shreya/.rvm/gems/ruby-2.5.1/gems/devise-4.6.2/app/views&quot;
+" type="ActionView::MissingTemplate">Failure/Error: render
+
+ActionView::MissingTemplate:
+  Missing template votes/edit with {:locale=&gt;[:en], :formats=&gt;[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=&gt;[], :handlers=&gt;[:raw, :erb, :html, :builder, :ruby, :haml, :coffee, :jbuilder]}. Searched in:
+    * &quot;/Users/shreya/github/Webboard/app/views&quot;
+    * &quot;/Users/shreya/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views&quot;
+    * &quot;/Users/shreya/.rvm/gems/ruby-2.5.1/gems/kaminari-core-1.1.1/app/views&quot;
+    * &quot;/Users/shreya/.rvm/gems/ruby-2.5.1/gems/devise-4.6.2/app/views&quot;
+/Users/shreya/.rvm/gems/ruby-2.5.1/gems/haml-5.1.1/lib/haml/helpers/action_view_mods.rb:15:in `render&apos;
+./spec/views/votes/edit.html.erb_spec.rb:9:in `block (2 levels) in &lt;top (required)&gt;&apos;</failure></testcase>
+<testcase classname="spec.views.votes.index" name="votes/index renders a list of votes" file="./spec/views/votes/index.html.erb_spec.rb" time="0.137443"><failure message="Missing template votes/index with {:locale=&gt;[:en], :formats=&gt;[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=&gt;[], :handlers=&gt;[:raw, :erb, :html, :builder, :ruby, :haml, :coffee, :jbuilder]}. Searched in:
+  * &quot;/Users/shreya/github/Webboard/app/views&quot;
+  * &quot;/Users/shreya/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views&quot;
+  * &quot;/Users/shreya/.rvm/gems/ruby-2.5.1/gems/kaminari-core-1.1.1/app/views&quot;
+  * &quot;/Users/shreya/.rvm/gems/ruby-2.5.1/gems/devise-4.6.2/app/views&quot;
+" type="ActionView::MissingTemplate">Failure/Error: render
+
+ActionView::MissingTemplate:
+  Missing template votes/index with {:locale=&gt;[:en], :formats=&gt;[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=&gt;[], :handlers=&gt;[:raw, :erb, :html, :builder, :ruby, :haml, :coffee, :jbuilder]}. Searched in:
+    * &quot;/Users/shreya/github/Webboard/app/views&quot;
+    * &quot;/Users/shreya/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views&quot;
+    * &quot;/Users/shreya/.rvm/gems/ruby-2.5.1/gems/kaminari-core-1.1.1/app/views&quot;
+    * &quot;/Users/shreya/.rvm/gems/ruby-2.5.1/gems/devise-4.6.2/app/views&quot;
+/Users/shreya/.rvm/gems/ruby-2.5.1/gems/haml-5.1.1/lib/haml/helpers/action_view_mods.rb:15:in `render&apos;
+./spec/views/votes/index.html.erb_spec.rb:12:in `block (2 levels) in &lt;top (required)&gt;&apos;</failure></testcase>
+<testcase classname="spec.views.votes.new" name="votes/new renders new vote form" file="./spec/views/votes/new.html.erb_spec.rb" time="0.119415"><failure message="Missing template votes/new with {:locale=&gt;[:en], :formats=&gt;[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=&gt;[], :handlers=&gt;[:raw, :erb, :html, :builder, :ruby, :haml, :coffee, :jbuilder]}. Searched in:
+  * &quot;/Users/shreya/github/Webboard/app/views&quot;
+  * &quot;/Users/shreya/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views&quot;
+  * &quot;/Users/shreya/.rvm/gems/ruby-2.5.1/gems/kaminari-core-1.1.1/app/views&quot;
+  * &quot;/Users/shreya/.rvm/gems/ruby-2.5.1/gems/devise-4.6.2/app/views&quot;
+" type="ActionView::MissingTemplate">Failure/Error: render
+
+ActionView::MissingTemplate:
+  Missing template votes/new with {:locale=&gt;[:en], :formats=&gt;[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=&gt;[], :handlers=&gt;[:raw, :erb, :html, :builder, :ruby, :haml, :coffee, :jbuilder]}. Searched in:
+    * &quot;/Users/shreya/github/Webboard/app/views&quot;
+    * &quot;/Users/shreya/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views&quot;
+    * &quot;/Users/shreya/.rvm/gems/ruby-2.5.1/gems/kaminari-core-1.1.1/app/views&quot;
+    * &quot;/Users/shreya/.rvm/gems/ruby-2.5.1/gems/devise-4.6.2/app/views&quot;
+/Users/shreya/.rvm/gems/ruby-2.5.1/gems/haml-5.1.1/lib/haml/helpers/action_view_mods.rb:15:in `render&apos;
+./spec/views/votes/new.html.erb_spec.rb:9:in `block (2 levels) in &lt;top (required)&gt;&apos;</failure></testcase>
+<testcase classname="spec.views.votes.show" name="votes/show renders attributes in &lt;p&gt;" file="./spec/views/votes/show.html.erb_spec.rb" time="0.126000"><failure message="Missing template votes/show with {:locale=&gt;[:en], :formats=&gt;[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=&gt;[], :handlers=&gt;[:raw, :erb, :html, :builder, :ruby, :haml, :coffee, :jbuilder]}. Searched in:
+  * &quot;/Users/shreya/github/Webboard/app/views&quot;
+  * &quot;/Users/shreya/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views&quot;
+  * &quot;/Users/shreya/.rvm/gems/ruby-2.5.1/gems/kaminari-core-1.1.1/app/views&quot;
+  * &quot;/Users/shreya/.rvm/gems/ruby-2.5.1/gems/devise-4.6.2/app/views&quot;
+" type="ActionView::MissingTemplate">Failure/Error: render
+
+ActionView::MissingTemplate:
+  Missing template votes/show with {:locale=&gt;[:en], :formats=&gt;[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=&gt;[], :handlers=&gt;[:raw, :erb, :html, :builder, :ruby, :haml, :coffee, :jbuilder]}. Searched in:
+    * &quot;/Users/shreya/github/Webboard/app/views&quot;
+    * &quot;/Users/shreya/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views&quot;
+    * &quot;/Users/shreya/.rvm/gems/ruby-2.5.1/gems/kaminari-core-1.1.1/app/views&quot;
+    * &quot;/Users/shreya/.rvm/gems/ruby-2.5.1/gems/devise-4.6.2/app/views&quot;
+/Users/shreya/.rvm/gems/ruby-2.5.1/gems/haml-5.1.1/lib/haml/helpers/action_view_mods.rb:15:in `render&apos;
+./spec/views/votes/show.html.erb_spec.rb:9:in `block (2 levels) in &lt;top (required)&gt;&apos;</failure></testcase>
+</testsuite>

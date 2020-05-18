@@ -1,0 +1,353 @@
+/*--------Reset--------*/
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+}
+
+
+
+/*css for layering the canvas */
+#sketch {
+	width:auto;
+    height:1000px;
+    overflow:hidden;
+}
+
+#tmp_canvas {
+    position: absolute;
+    left: 0px; right: 0;
+    bottom: 0; top: 0;
+    cursor: url(dot.cur), default;
+}
+
+/*css for the page number display at bottom right*/
+
+.player {
+    position: absolute;
+    z-index:100;
+    padding:0.5em;
+    bottom:0;
+    margin: 0 15%;
+    transition:0.5s;
+    -moz-user-select: none;
+    user-select: none; 
+    width:70%;
+    opacity: 0.2;
+}
+
+
+.player:hover{
+    opacity:0.8;
+}
+
+.page{
+    position: fixed;
+    z-index:1000;
+    right:0;
+    bottom:0;
+    padding:0.5em;
+    margin:1em;
+    opacity: 0.5;
+    transition:0.5s;
+    -moz-user-select: none;
+    user-select: none; 
+}
+
+.page:hover{
+    opacity:1;
+    transform: scale(1.15);
+}
+
+.currentTime{
+    position: fixed;
+    z-index:1000;
+    left:0;
+    bottom:0;
+    padding:0.5em;
+    margin:1em;
+    opacity: 0.5;
+    transition:0.5s;
+    -moz-user-select: none;
+    user-select: none; 
+}
+
+.currentTime:hover{
+    opacity:1;
+    transform: scale(1.15);
+}
+
+/*--------Modules-------
+
+
+/*Toolbar
+.toolbar{
+    font-size:1.7em;
+    width:99px;
+    position: relative;
+    z-index: 10000;
+    height: 100%;
+    float: left;
+    display: block;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+/*container for individual tools
+.toolbar-item{
+    text-align:center;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    padding:0.3em;
+    margin:2px;
+    cursor: pointer;
+    border:1px solid rgb(60, 235, 241);
+}
+/* container for the set of tools
+.toolbox{
+    flex: 1;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 2px;
+    display: inline-flex;
+
+}
+/*container for individual tools
+.toolbox-item{
+    flex: 1;
+    display: block;
+    margin:2px;
+    padding: 2px;
+    align-self: center; 
+    transition: 0.5s;
+}
+
+.toolbox-item:hover{
+    transform: scale(1.27);
+}
+
+/*--------Themes-------
+
+
+.is-light{
+    background-color: rgb(236, 230, 230);
+    color: rgb(27, 27, 27);
+}
+
+.is-active{
+    color:black;
+    background-color: white;
+    }
+
+/*------Text-Colors-------
+.has-text-red{
+    color: red;
+}
+.has-text-blue{
+    color: blue;
+}
+.has-text-green{
+    color: green;
+}
+.has-text-yellow{
+    color: yellow;
+}
+.has-text-violet{
+    color: violet;
+}
+.has-text-orange{
+    color: orangered;
+}
+.has-text-black{
+    color:black;
+}
+
+/*-----Border--------
+
+.has-border{
+    border: 2px solid white;
+}
+/*-----Text-Sizes------
+
+.size-small{
+    font-size: 7px;
+}
+.size-medium{
+    font-size: 14px;
+}
+.size-large{
+    font-size: 21px;
+}
+.size-full{
+    font-size: 28px;
+}
+
+
+/*--------------------------------- Loader ------------------------------*/
+
+#save {
+    left: 150px;
+    position: absolute;
+    visibility: hidden;
+    text-decoration: underline;
+    color: darkgrey;
+}
+
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    margin: -75px 0 0 -75px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid rgb(43, 43, 43);
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    -moz-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+
+  @-moz-keyframes spin {
+    0% { -moz-transform: rotate(0deg); }
+    100% { -moz-transform: rotate(360deg); }
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .toolbar{
+    width:100px;
+    z-index: 999;
+    position: relative;
+    float: left;
+    background: rgb(231, 231, 231);
+    padding:15px 5px;
+    -moz-user-select: none;
+    user-select: none; 
+}
+
+.toolbar-item{
+    text-align: center;
+    line-height: 40px;
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    float: left; margin: 2px 2px; cursor: pointer; 
+    padding: 2px;
+    overflow: hidden;
+    border: 1px solid rgba(233, 41, 41, 0.288);
+}
+
+.toolbox{
+    text-align: center;
+    width: 90px;
+    padding: 2px;
+    float: left; margin: 4px 2px; cursor: pointer; 
+    border: 1px solid rgba(0, 0, 0, 0.288);    
+}
+
+.toolbox-item{
+    float: left;
+    width: 35px;
+    height: 35px;
+    margin: 5px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+}
+
+.toolbox-item img{
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+
+/*-----Themes-------*/
+.is-red{
+    background-color: red;
+}
+.is-blue{
+    background-color: rgb(87, 87, 233);
+}
+.is-green{
+    background-color: rgb(26, 163, 60);
+}
+.is-yellow{
+    background-color: yellow;
+}
+.is-violet{
+    background-color: violet;
+}
+.is-orange{
+    background-color: rgb(255, 102, 0);
+}
+.is-black{
+    background-color:black;
+}
+
+.is-dark{
+    background-color: rgb(43, 43, 43); 
+    color:white;
+}
+
+/*---------states------*/
+.is-active{
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.473);
+    transform: scale(0.7);
+}
+
+
+.slidecontainer {
+    width: 100%;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    display: inline;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 5px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+  }

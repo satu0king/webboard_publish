@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="LecturesController GET #new" tests="1" time="0.016753" failures="0" errors="1" skipped="0" timestamp="2020-05-16T15:58:41+05:30">
+  <testcase name="LecturesController GET #new returns a success response" time="0.016103">
+    <error type="ActionController::UrlGenerationError" message="No route matches {:action=&gt;&quot;new&quot;, :controller=&gt;&quot;lectures&quot;}">
+No route matches {:action=&gt;"new", :controller=&gt;"lectures"} (ActionController::UrlGenerationError)
+ActionController::UrlGenerationError:
+No route matches {:action=&gt;"new", :controller=&gt;"lectures"}
+./spec/controllers/lectures_controller_spec.rb:62:in `block (3 levels) in &lt;top (required)&gt;'    </error>
+  </testcase>
+</testsuite>

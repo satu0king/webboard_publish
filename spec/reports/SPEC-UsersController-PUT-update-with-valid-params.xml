@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="UsersController PUT #update with valid params" tests="2" time="0.035107" failures="0" errors="0" skipped="2" timestamp="2020-05-16T15:58:42+05:30">
+  <testcase name="UsersController PUT #update with valid params updates the requested user (PENDING)" time="0.016393">
+    <skipped/>
+  </testcase>
+  <testcase name="UsersController PUT #update with valid params redirects to the user (PENDING)" time="0.017354">
+    <skipped/>
+  </testcase>
+</testsuite>

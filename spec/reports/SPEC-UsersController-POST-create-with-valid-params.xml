@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="UsersController POST #create with valid params" tests="2" time="0.040266" failures="0" errors="0" skipped="2" timestamp="2020-05-16T15:58:42+05:30">
+  <testcase name="UsersController POST #create with valid params creates a new User (PENDING)" time="0.028886">
+    <skipped/>
+  </testcase>
+  <testcase name="UsersController POST #create with valid params redirects to the created user (PENDING)" time="0.01064">
+    <skipped/>
+  </testcase>
+</testsuite>

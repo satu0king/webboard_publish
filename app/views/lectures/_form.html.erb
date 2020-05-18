@@ -1,0 +1,29 @@
+<%= form_with(model: [@course, @lecture], local: true, multipart: true) do |form| %>
+  <% if @lecture.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lecture.errors.count, "error") %> prohibited this lecture from being saved:</h2>
+
+      <ul>
+      <% @lecture.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+ <div class="container">
+  <div class="column is-6 is-offset-4 alert is-white has-shadow">
+    <div class="field block">
+      <%
+=begin%>
+ <%= form.label :name %> 
+<%
+=end%>
+      <%= form.text_field :name, class:"input is-medium", placeholder:"Lecture Name" %>
+    </div>
+
+    <div class="actions block">
+      <%= form.submit  class:"button is-success is-medium" %>
+    </div>
+  </div>
+ </div>
+<% end %>

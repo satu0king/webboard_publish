@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="users/edit" tests="1" time="0.016714" failures="0" errors="1" skipped="0" timestamp="2020-05-16T15:58:43+05:30">
+  <testcase name="users/edit renders the edit user form" time="0.016213">
+    <error type="ActiveRecord::RecordInvalid" message="Validation failed: Email can't be blank, Password can't be blank">
+Validation failed: Email can't be blank, Password can't be blank (ActiveRecord::RecordInvalid)
+ActiveRecord::RecordInvalid:
+Validation failed: Email can't be blank, Password can't be blank
+./spec/views/users/edit.html.erb_spec.rb:5:in `block (2 levels) in &lt;top (required)&gt;'    </error>
+  </testcase>
+</testsuite>

@@ -1,0 +1,192 @@
+<% if (user_signed_in? and current_user == @course_holder) or @hang == true %>
+<html lang="en">
+    <head>
+        <%= csrf_meta_tags %>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="css/webboard.css" type="text/css" rel="stylesheet">
+        <link rel="shortcut icon" href="css/webboard.ico" type="image/x-icon" />
+        <title>WebBoard</title>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js" integrity="sha384-CchuzHs077vGtfhGYl9Qtc7Vx64rXBXdIAZIPbItbNyWIRTdG0oYAqki3Ry13Yzu" crossorigin="anonymous"></script>
+        <script src="/jquery.js"></script>
+        <script src="/js/pdf.js"></script>
+    </head>
+
+<body onload="loader();sessionLoad(<%=@lecture.to_json%>,'<%=@pdf%>');" style="margin:0; background-color: white;">
+    <script>
+        var userSignedIn = <%= user_signed_in? %>;
+        var pdf_url = "<%=@pdf%>";
+    </script>
+        <div id="loader"></div>
+                <div class="toolbar" id="minibar2">
+                <div class="toolbar-item" id="pdf">
+                <img src="/asset/upload.png" height="37" width="37" style="position:absolute;">     
+                         
+                    <input 
+                        type="file" 
+                        name="pdf" 
+                        id="fileInput" 
+                        style="width:40;height:40;opacity:0;cursor:pointer;"
+                    >
+                   
+                
+                </div>
+                <script>
+                    $("#fileInput").change(function(){
+                        var data = new FormData();
+                        var file = null;
+                        if($(this).prop('files').length > 0)
+                        {
+                            file =$(this).prop('files')[0];
+                            data.append("pdf", file);
+                        }
+                        console.log(file.type);
+                        var path = window.location.pathname;
+                        var id = path.substring(path.lastIndexOf('/')+1);
+                        if(<%=user_signed_in?%> && id !== 'board' && file.type == "application/pdf"){
+                            $.ajax({
+                                type: 'POST',
+                                url: '/board/'+id+'/'+'pdf',
+                                beforeSend: function(xhr) {
+                                    xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
+                                },
+                                data : data,
+                                contentType : false,
+                                processData : false,
+                                success : function() {
+                                    console.log("pdf success");
+                                }
+                            }).fail(function(err) {
+                                console.log(err);
+                            });
+                        }
+                    });
+                </script>
+                <div class="toolbar-item" onclick = "clearScreen()">
+                <img src="/asset/delete.png" height="40" width="40">
+            </div>
+            <div class="toolbar-item stroke" id="PenStroke">
+                <img src="/asset/pencil.png" height="40" width="40">
+            </div>
+            <div class="toolbar-item stroke" id="Eraser">
+                <img src="/asset/eraser.png" height="40" width="40">
+            </div>
+            <div class="toolbar-item" onclick = "pageSave();prevPage()">
+                <img src="/asset/previous.png" height="40" width="40">
+            </div>
+            <div class="toolbar-item" onclick = "pageSave();nextPage()">
+                <img src="/asset/next.png" height="40" width="40">
+            </div>
+            <div class="toolbar-item" id="saveOnline" onclick="save()">
+                <img src="/asset/save.png" height="40" width="40">
+            </div>
+
+            <div id="save">Saving...</div>
+        
+            <% if false %>
+            <% if !user_signed_in? %>
+                <div></div>
+            <% elsif @x==@y %>
+                <div id="snackbar">Your project has been saved online</div>
+            <% else %>
+                <div id="snackbar" style="color: red;">You do not have the access to alter the Board</div>
+            <% end %>
+            <% end %>
+
+
+            <div class="toolbar-item stroke" id="LineStroke">
+                <img src="/asset/line.png" height="35" width="35">
+            </div>
+            <div class="toolbar-item stroke" id="CircleStroke">
+                <img src="/asset/circle.png" height="35" width="35">
+            </div>
+            <div class="toolbar-item stroke" id="QuadStroke">
+                <img src="/asset/square.png" height="35" width="35">
+            </div>
+
+            
+            <% if false %>
+            <div class="toolbar-item">
+                <img src="/asset/text.png" height="35" width="35">
+            </div>
+            <% end%>
+            
+            
+            <div class="toolbox">
+                <div class="toolbox-item is-black color-selector">
+
+                </div>
+                <div class="toolbox-item is-red color-selector">
+
+                </div>
+                <div class="toolbox-item is-blue color-selector">
+
+                </div>
+                <div class="toolbox-item is-green color-selector">
+
+                </div>
+                <div class="toolbox-item is-yellow color-selector">
+
+                </div>
+                <div class="toolbox-item is-orange color-selector">
+
+                </div>
+            </div>
+
+            <div class="toolbox">
+                <div class="toolbox-item size-selector" data-size="1">
+                    <img src="/asset/size.png" height="8" width="8">
+                </div>
+                <div class="toolbox-item size-selector" data-size="5" >
+                    <img src="/asset/size.png" height="15" width="15">
+                </div>
+                <div class="toolbox-item size-selector" data-size="16">
+                    <img src="/asset/size.png" height="20" width="20">
+                </div>
+                <div class="toolbox-item size-selector" data-size="25">
+                    <img src="/asset/size.png" height="25" width="25">
+                </div>
+            </div>
+            <div class="toolbox" onclick="shrinkPage();pageSave()">
+                <img src="/asset/shrink.png" height="35" width="35">
+            </div>
+            <div class="toolbox" onclick="extendPage();pageSave()">
+                <img src="/asset/extend.png" height="35" width="35">
+            </div>
+        </div>
+        <div id="sketch">
+
+        <div class="page is-dark">Page 1 of 1</div>
+        <div class="canvasArea" style="position:relative;">
+			<canvas id="mycanvas" class="canvas1" style="position: absolute; left: 0; top: 0; z-index: 1; width:100%;height:100%">Your Browser Does Not Support WebBoard</canvas>
+            <canvas id="tmp_canvas" class="canvas1" style="position: absolute; left: 0; top: 0; z-index: 2; width:100%;height:100%">Your Browser Does Not Support WebBoard</canvas>
+            <canvas id="pdf_canvas" class="canvas1" style="position: absolute; left: 0; top: 0; z-index: 0; width:100%;height:100%">Your Browser Does Not Support WebBoard</canvas>
+            
+    	</div>
+
+        <!-- <canvas id="mycanvas"></canvas> -->
+    </div>
+
+        <link rel="stylesheet" type="text/css" href="/css/webboard.css"/>
+        <script src="/js/jspdf.min.js"></script>
+        <script src="/js/sweetalert.min.js"></script>
+        <script src="/js/canvas.js"></script>
+        <script src="/js/render.js"></script>
+        <script src="/js/strokes.js"></script>
+        <script src="/js/canvasApi.js"></script>
+        <script src="/js/loader.js"></script>
+        <script src="/js/listeners.js"></script>
+        <script src="/js/data.js"></script>
+        <script src="/js/simplify.js"></script>
+        <script src="/js/lzma_worker.js"></script>
+        <script language="javascript" src="/js/lz-string.js"></script>
+        <script src="/js/pdfjs-helper.js"></script>
+</body>
+
+</html>
+<% else %>
+<h1> 404 Error </h1>
+<% end %>

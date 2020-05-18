@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Votes GET /votes" tests="1" time="0.014117" failures="0" errors="1" skipped="0" timestamp="2020-05-16T15:58:43+05:30">
+  <testcase name="Votes GET /votes works! (now write some real specs)" time="0.012635">
+    <error type="NameError" message="undefined local variable or method `votes_path' for #&lt;RSpec::ExampleGroups::Votes::GETVotes:0x00007f97ef04b738&gt;">
+undefined local variable or method `votes_path' for #&lt;RSpec::ExampleGroups::Votes::GETVotes:0x00007f97ef04b738&gt; (NameError)
+NameError:
+undefined local variable or method `votes_path' for #&lt;RSpec::ExampleGroups::Votes::GETVotes:0x00007f97ef04b738&gt;
+./spec/requests/votes_spec.rb:6:in `block (3 levels) in &lt;top (required)&gt;'    </error>
+  </testcase>
+</testsuite>

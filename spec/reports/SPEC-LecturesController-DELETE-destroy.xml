@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="LecturesController DELETE #destroy" tests="2" time="0.041897" failures="0" errors="0" skipped="2" timestamp="2020-05-16T15:58:42+05:30">
+  <testcase name="LecturesController DELETE #destroy destroys the requested lecture (PENDING)" time="0.017572">
+    <skipped/>
+  </testcase>
+  <testcase name="LecturesController DELETE #destroy redirects to the lectures list (PENDING)" time="0.016072">
+    <skipped/>
+  </testcase>
+</testsuite>

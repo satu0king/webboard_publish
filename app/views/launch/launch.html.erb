@@ -1,0 +1,10 @@
+<h1>LTI Launch Verified!</h1>
+<ul>
+	<li>lis_person_name_full is <b><%= @lis_person_name_full %></b></li>
+	<li>Controller: Launch#launch</li>
+	<li>Template: app/views/application/launch.html.erb</li>
+</ul>
+
+<p>Note: You can see all the LTI params in your server console.</p>
+<p>Course name : </p> 
+<%= link_to @course_name, course_lectures_path(@course) %>

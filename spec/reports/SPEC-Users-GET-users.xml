@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Users GET /users" tests="1" time="0.006797" failures="0" errors="1" skipped="0" timestamp="2020-05-16T15:58:42+05:30">
+  <testcase name="Users GET /users works! (now write some real specs)" time="0.006037">
+    <error type="NameError" message="undefined local variable or method `users_path' for #&lt;RSpec::ExampleGroups::Users::GETUsers:0x00007f97f2d07988&gt;">
+undefined local variable or method `users_path' for #&lt;RSpec::ExampleGroups::Users::GETUsers:0x00007f97f2d07988&gt; (NameError)
+NameError:
+undefined local variable or method `users_path' for #&lt;RSpec::ExampleGroups::Users::GETUsers:0x00007f97f2d07988&gt;
+./spec/requests/users_spec.rb:6:in `block (3 levels) in &lt;top (required)&gt;'    </error>
+  </testcase>
+</testsuite>

@@ -1,0 +1,2 @@
+module WebBoardHelper
+end

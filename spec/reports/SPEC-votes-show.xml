@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="votes/show" tests="1" time="0.156048" failures="0" errors="1" skipped="0" timestamp="2020-05-16T15:58:44+05:30">
+  <testcase name="votes/show renders attributes in &lt;p&gt;" time="0.154954">
+    <error type="ActionView::MissingTemplate" message="Missing template votes/show with {:locale=&gt;[:en], :formats=&gt;[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=&gt;[], :handlers=&gt;[:raw, :erb, :html, :builder, :ruby, :haml, :coffee, :jbuilder]}. Searched in:...">
+Missing template votes/show with {:locale=&gt;[:en], :formats=&gt;[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=&gt;[], :handlers=&gt;[:raw, :erb, :html, :builder, :ruby, :haml, :coffee, :jbuilder]}. Searched in:
+  * "/Users/shreya/github/Webboard/app/views"
+  * "/Users/shreya/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views"
+  * "/Users/shreya/.rvm/gems/ruby-2.5.1/gems/kaminari-core-1.1.1/app/views"
+  * "/Users/shreya/.rvm/gems/ruby-2.5.1/gems/devise-4.6.2/app/views"
+ (ActionView::MissingTemplate)
+ActionView::MissingTemplate:
+Missing template votes/show with {:locale=&gt;[:en], :formats=&gt;[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=&gt;[], :handlers=&gt;[:raw, :erb, :html, :builder, :ruby, :haml, :coffee, :jbuilder]}. Searched in:
+  * "/Users/shreya/github/Webboard/app/views"
+  * "/Users/shreya/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views"
+  * "/Users/shreya/.rvm/gems/ruby-2.5.1/gems/kaminari-core-1.1.1/app/views"
+  * "/Users/shreya/.rvm/gems/ruby-2.5.1/gems/devise-4.6.2/app/views"
+
+/Users/shreya/.rvm/gems/ruby-2.5.1/gems/haml-5.1.1/lib/haml/helpers/action_view_mods.rb:15:in `render'
+./spec/views/votes/show.html.erb_spec.rb:9:in `block (2 levels) in &lt;top (required)&gt;'    </error>
+  </testcase>
+</testsuite>

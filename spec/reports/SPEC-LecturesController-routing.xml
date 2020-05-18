@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="LecturesController routing" tests="8" time="0.100587" failures="8" errors="0" skipped="0" timestamp="2020-05-16T15:58:43+05:30">
+  <testcase name="LecturesController routing routes to #index" time="0.041532">
+    <failure type="RSpec::Expectations::ExpectationNotMetError" message="No route matches &quot;/lectures&quot;">
+No route matches "/lectures" (RSpec::Expectations::ExpectationNotMetError)
+No route matches "/lectures"
+./spec/routing/lectures_routing_spec.rb:6:in `block (3 levels) in &lt;top (required)&gt;'    </failure>
+  </testcase>
+  <testcase name="LecturesController routing routes to #new" time="0.005884">
+    <failure type="RSpec::Expectations::ExpectationNotMetError" message="No route matches &quot;/lectures/new&quot;">
+No route matches "/lectures/new" (RSpec::Expectations::ExpectationNotMetError)
+No route matches "/lectures/new"
+./spec/routing/lectures_routing_spec.rb:10:in `block (3 levels) in &lt;top (required)&gt;'    </failure>
+  </testcase>
+  <testcase name="LecturesController routing routes to #show" time="0.006021">
+    <failure type="RSpec::Expectations::ExpectationNotMetError" message="No route matches &quot;/lectures/1&quot;">
+No route matches "/lectures/1" (RSpec::Expectations::ExpectationNotMetError)
+No route matches "/lectures/1"
+./spec/routing/lectures_routing_spec.rb:14:in `block (3 levels) in &lt;top (required)&gt;'    </failure>
+  </testcase>
+  <testcase name="LecturesController routing routes to #edit" time="0.007722">
+    <failure type="RSpec::Expectations::ExpectationNotMetError" message="No route matches &quot;/lectures/1/edit&quot;">
+No route matches "/lectures/1/edit" (RSpec::Expectations::ExpectationNotMetError)
+No route matches "/lectures/1/edit"
+./spec/routing/lectures_routing_spec.rb:18:in `block (3 levels) in &lt;top (required)&gt;'    </failure>
+  </testcase>
+  <testcase name="LecturesController routing routes to #create" time="0.008302">
+    <failure type="RSpec::Expectations::ExpectationNotMetError" message="No route matches &quot;/lectures&quot;">
+No route matches "/lectures" (RSpec::Expectations::ExpectationNotMetError)
+No route matches "/lectures"
+./spec/routing/lectures_routing_spec.rb:23:in `block (3 levels) in &lt;top (required)&gt;'    </failure>
+  </testcase>
+  <testcase name="LecturesController routing routes to #update via PUT" time="0.010854">
+    <failure type="RSpec::Expectations::ExpectationNotMetError" message="No route matches &quot;/lectures/1&quot;">
+No route matches "/lectures/1" (RSpec::Expectations::ExpectationNotMetError)
+No route matches "/lectures/1"
+./spec/routing/lectures_routing_spec.rb:27:in `block (3 levels) in &lt;top (required)&gt;'    </failure>
+  </testcase>
+  <testcase name="LecturesController routing routes to #update via PATCH" time="0.008327">
+    <failure type="RSpec::Expectations::ExpectationNotMetError" message="No route matches &quot;/lectures/1&quot;">
+No route matches "/lectures/1" (RSpec::Expectations::ExpectationNotMetError)
+No route matches "/lectures/1"
+./spec/routing/lectures_routing_spec.rb:31:in `block (3 levels) in &lt;top (required)&gt;'    </failure>
+  </testcase>
+  <testcase name="LecturesController routing routes to #destroy" time="0.009496">
+    <failure type="RSpec::Expectations::ExpectationNotMetError" message="No route matches &quot;/lectures/1&quot;">
+No route matches "/lectures/1" (RSpec::Expectations::ExpectationNotMetError)
+No route matches "/lectures/1"
+./spec/routing/lectures_routing_spec.rb:35:in `block (3 levels) in &lt;top (required)&gt;'    </failure>
+  </testcase>
+</testsuite>

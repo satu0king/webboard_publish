@@ -1,0 +1,41 @@
+<%= provide(:title, "Sign Up") %>
+
+<div class="hero is-dark is-fullheight">
+  <div class="hero-body">
+    <div class="container">
+      <div class="column is-4 is-offset-4 alert is-white has-shadow">
+        <div class="block" align="center">
+          <h1>Sign Up</h1>
+          <h6>Please sign up to create an account</h6>
+        </div>
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
+
+        <div class="field block">
+          <%= f.text_field :user_name, class:"input is-medium", placeholder:"Name" %>
+        </div>
+
+        <div class="field block">
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"input is-medium", placeholder:"Email"  %>
+        </div>
+
+        <div class="field block">
+          <%= f.password_field :password, autocomplete: "off", class:"input is-medium", placeholder:"Password"  %>
+          <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %>
+        </div>
+
+        <div class="field block">
+          <%= f.password_field :password_confirmation, autocomplete: "off", class:"input is-medium", placeholder:"Confirm Password"  %>
+        </div>
+        <div class="actions block">
+          <%= f.submit "Sign up", class:"button is-block is-medium is-success" %>
+        </div>
+        <% end %>
+        <br />
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
+  </div>
+</div>

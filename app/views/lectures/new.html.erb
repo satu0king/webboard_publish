@@ -1,0 +1,14 @@
+
+<% if user_signed_in? and current_user  == @course.user %>
+
+<div class="block" align="center">
+    <h1>New Lecture</h1>
+</div>
+<%= render 'form', model: @lecture %>
+
+<%= link_to 'Back', course_lectures_path, class:"button is-medium is-primary" %>
+<% else %> 
+<div style="background-color: red; height: 60%;">
+<h1 style="padding-top: 4%;"> You don't have the excess to this page </h1>
+</div>
+<% end %>

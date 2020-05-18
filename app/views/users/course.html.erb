@@ -1,0 +1,51 @@
+<%= provide(:title, 'Course List') %>
+<div class="hero is-small is-white">
+	<div class="hero-body container">
+		<div class="columns">
+			<div class="column is-8">
+				<h1>Your Courses</h1>
+			</div>
+			<div class="column is-4" align="right">
+				<% if user_signed_in? and current_user == @user %>
+					<h1><%= link_to "Create Course +", new_course_path, class: "button is-success is-medium"%></h1>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container block">
+<% if @course[0] == 'No courses' %>
+<% count = 0 %>
+<% else %>
+<% count = @course.count %>
+<% end %>
+<strong><%= pluralize(count, 'Course') %></strong>
+</div>
+
+<div class="container">
+	<div class="columns is-multiline">
+		<% @course.each do |i| %>
+			<% if count == 0 %>
+				<div class="notification container">
+					<h4 class="aaa">No Courses Registered</h4>
+				</div>
+			<% else %>
+				<div class="column is-3">
+					<div class="card has-shadow">
+						<img class="card-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf1PRVw8JpQaguwC8zW4Fnvcl0Rdi-IuXjHq0qHFNBxrsH5r5OxA">
+						<div class="card-header">
+							<div class="card-header-title is-centered">
+							<h5><%= i %></h5>
+							</div>
+						</div>
+						<div class="card-footer">
+							<%= link_to "View Lectures", course_lectures_path(Course.where(:name => i).find_by_user_id(current_user.id)), class: "card-footer-item button is-info is-small"%>
+							<%= link_to "Delete Course", course_path(Course.where(:name => i).find_by_user_id(current_user.id)),data: { confirm: 'Are you sure?' }, method: :delete, class: "card-footer-item button is-danger is-small" %>
+						</div>
+					</div>
+				</div>
+			<% end %>
+		<% end %>
+	</div>
+</div>

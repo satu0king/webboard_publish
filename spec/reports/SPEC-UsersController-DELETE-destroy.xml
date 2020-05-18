@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="UsersController DELETE #destroy" tests="2" time="0.03945" failures="0" errors="0" skipped="2" timestamp="2020-05-16T15:58:42+05:30">
+  <testcase name="UsersController DELETE #destroy destroys the requested user (PENDING)" time="0.014512">
+    <skipped/>
+  </testcase>
+  <testcase name="UsersController DELETE #destroy redirects to the users list (PENDING)" time="0.017157">
+    <skipped/>
+  </testcase>
+</testsuite>

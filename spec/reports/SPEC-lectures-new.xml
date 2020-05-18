@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="lectures/new" tests="1" time="0.093466" failures="0" errors="1" skipped="0" timestamp="2020-05-16T15:58:43+05:30">
+  <testcase name="lectures/new renders new lecture form" time="0.092827">
+    <error type="ActionView::Template::Error" message="Devise could not find the `Warden::Proxy` instance on your request environment....">
+Devise could not find the `Warden::Proxy` instance on your request environment.
+Make sure that your application is loading Devise and Warden as expected and that the `Warden::Manager` middleware is present in your middleware stack.
+If you are seeing this on one of your tests, ensure that your tests are either executing the Rails middleware stack or that your tests are using the `Devise::Test::ControllerHelpers` module to inject the `request.env['warden']` object for you. (ActionView::Template::Error)
+ActionView::Template::Error:
+Devise could not find the `Warden::Proxy` instance on your request environment.
+Make sure that your application is loading Devise and Warden as expected and that the `Warden::Manager` middleware is present in your middleware stack.
+If you are seeing this on one of your tests, ensure that your tests are either executing the Rails middleware stack or that your tests are using the `Devise::Test::ControllerHelpers` module to inject the `request.env['warden']` object for you.
+/Users/shreya/.rvm/gems/ruby-2.5.1/gems/devise-4.6.2/lib/devise/controllers/helpers.rb:143:in `warden'
+/Users/shreya/.rvm/gems/ruby-2.5.1/gems/devise-4.6.2/lib/devise/controllers/helpers.rb:126:in `current_user'
+/Users/shreya/.rvm/gems/ruby-2.5.1/gems/devise-4.6.2/lib/devise/controllers/helpers.rb:122:in `user_signed_in?'
+./app/views/lectures/new.html.erb:2:in `_app_views_lectures_new_html_erb___2599098794543569378_70145322371100'
+/Users/shreya/.rvm/gems/ruby-2.5.1/gems/haml-5.1.1/lib/haml/helpers/action_view_mods.rb:15:in `render'
+./spec/views/lectures/new.html.erb_spec.rb:9:in `block (2 levels) in &lt;top (required)&gt;'
+------------------
+--- Caused by: ---
+Devise::MissingWarden:
+  Devise could not find the `Warden::Proxy` instance on your request environment.
+  Make sure that your application is loading Devise and Warden as expected and that the `Warden::Manager` middleware is present in your middleware stack.
+  If you are seeing this on one of your tests, ensure that your tests are either executing the Rails middleware stack or that your tests are using the `Devise::Test::ControllerHelpers` module to inject the `request.env['warden']` object for you.
+  /Users/shreya/.rvm/gems/ruby-2.5.1/gems/devise-4.6.2/lib/devise/controllers/helpers.rb:143:in `warden'    </error>
+  </testcase>
+</testsuite>

@@ -1,0 +1,21 @@
+<%= provide(:title, "Following") %>
+<h1>Following Courses</h1>
+<% @following.each do |i| %>
+      <div class="divcss" style="width:100px;">
+    <ul class="ulcss">
+      <li class="licss"> 
+        <h4 class="aaa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= i.course.name %> : By <%= i.course.user.user_name %></h4>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "View Course", course_lectures_path(i.course), class: "btn btn-primary"%>
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "Unfollow", user_unfollow_path(course_id: i.course.id), method: :delete, class: "btn btn-default"%>
+        <p> 
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          No of lectures : <%= i.course.lectures.count %> 
+        </p>
+      </li>
+      <hr>
+    </ul>
+  </div>
+<% end %>
+
+

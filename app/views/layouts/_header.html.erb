@@ -1,0 +1,54 @@
+<div class="navbar is-dark">
+  <div class="container is-large">
+  <div class="navbar-brand">
+
+    <%= link_to "Webboard", "/", class: "navbar-item is-title"%>
+
+    <div class="navbar-burger">
+      <div class="navbar-item" onclick="document.getElementById('burger-activate').classList.toggle('is-active')">Menu</div>
+      </div>
+    </div>
+
+    <div class="navbar-menu" id="burger-activate">
+      <div class="navbar-left">
+          <div class="navbar-item">
+          <input class="input" type="text" placeholder="Search">
+          <!--<button class="btn btn-outline-secondary my-2 my-sm-0" id="searchButton" onclick="search()" type="submit">Search</button>-->
+          <script>
+            function search(){
+                window.location="/search?q="+document.getElementById("searchInput").value
+            }
+            document.getElementById("searchInput").onkeypress = function(event){
+                if (event.keyCode == 13 || event.which == 13){
+                    search()
+                }
+            };
+          </script>
+          </div>
+      </div>
+
+      <div class="navbar-right">
+        <%= link_to "Home",       root_path , class: "navbar-item" %>
+        <%= link_to "Help",       help_path , class: "navbar-item" %>
+        <%= link_to "About",      about_path , class: "navbar-item" %>
+        <%= link_to "Index",      index_path , class: "navbar-item" %>
+        <% if !user_signed_in? %>
+        <%= link_to "Log in", new_user_session_path , class: "navbar-item" %>
+        <% else %>
+
+        <div class="dropdown-hover">
+          <div class="navbar-item dropbtn" ><%= link_to current_user.user_name %></div>
+            <div class="dropdown-menu is-white">
+              <%= link_to "Profile", user_profile_path(current_user.id) , class: "dropdown-item"%>
+              <%= link_to "Courses", user_course_path(current_user.id) , class: "dropdown-item"%>
+              <%= link_to "Following", user_follow_path(current_user.id) , class: "dropdown-item"%>
+              <div class="dropdown-divider"></div>
+              <%= link_to "Log out", destroy_user_session_path, method: :delete , class: "dropdown-item"%>
+            </div>
+        </div>
+
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

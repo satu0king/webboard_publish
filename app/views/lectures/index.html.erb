@@ -1,0 +1,69 @@
+<%= provide(:title, 'Lecture List') %>
+
+<p id="notice"><%= notice %></p>
+<strong> Description : </strong>
+<%= @course.description %>
+<h1>Lectures</h1>
+<% if @lectures[0] == 'No lectures' %>
+<% count = 0 %>>
+<% else %>
+<% count = @lectures.count %>
+<% end %>
+
+<strong><%= pluralize(count, 'Lecture') %></strong>
+<hr class="hrcss">
+<% @lectures.each do |i| %>
+<div class="divcss" style="width:300px;">
+	<ul class="ulcss">
+	<% if count!=0 %>
+  	<li class="licss">
+	  <div id="inline" style="position:relative">
+	  	<div>
+  		<img src= <%=i.card%>>
+		<h4 class="aaa"><%= i.name %>
+		<% if user_signed_in? and current_user == @course.user %>
+    	 <%= link_to 'Change name', edit_course_lecture_path(i.course_id,i.id), class: "button is-primary" %>
+		<% end %>
+		</h4>
+		<div class="buttons" style="flex-direction:row;display:flex;">
+      	<%= link_to 'View', board_view_path(i.id), target: 'blank', class: "button is-info", style:"margin-right:3px;" %>
+      	<% if user_signed_in? and current_user == @course.user %>
+   		<%= link_to 'Edit', board_path(i.id), target: '_blank', class: "button is-primary", style:"margin-right:3px;" %>
+    	<%= link_to 'Delete', course_lecture_path(params[:course_id],i), method: :delete, data: { confirm: 'Are you sure?' }, class: "button is-danger", style:"margin-right:3px;" %>
+		</div>
+		</div>
+		<div style="right:0;position:absolute;padding-right:1rem;">
+		<h6><b>Created On: </b><%= i.created_at %></h4>
+		<h6><b>Updated On: </b><%= i.updated_at %></h4>
+		</div>
+		</div>
+		<% end %>
+
+  	</li>
+  </ul>
+</div>
+<% else %>
+<%= i %><br>
+<% end %>
+<% end %>
+<% if user_signed_in? and current_user == @course.user %>
+
+<div style="margin-left: 1rem;" >
+<%= link_to "Create Lecture!", new_course_lecture_path, class: "button is-info" %><br>
+<br>
+<%= link_to 'Back', user_course_path(current_user), class:  "button is-info" %>
+</div>
+<% end %>
+<script>
+	if(localStorage.getItem("Courses")===null) {
+		var courseList = [];
+		courseList.push(["<%=@course.id%>", "<%=@course.name%>"]);
+		localStorage.setItem("Courses", JSON.stringify(courseList));
+	} else {
+		var courseList = JSON.parse(localStorage.getItem("Courses"));
+		if(!courseList.includes(["<%=@course.id%>", "<%=@course.name%>"])) {
+			courseList.push(["<%=@course.id%>", "<%=@course.name%>"]);
+			localStorage.setItem("Courses", JSON.stringify(courseList));
+		}
+	}
+</script>

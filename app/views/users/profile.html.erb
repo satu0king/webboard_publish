@@ -1,0 +1,4 @@
+<%= provide(:title, 'Profile') %>
+<%= @user.email %>
+<br>
+<%= link_to "Change Password", edit_user_password_path(@user), class: "button is-primary" %>

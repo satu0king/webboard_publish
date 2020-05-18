@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CoursesController GET #new" tests="1" time="0.047284" failures="0" errors="0" skipped="0" timestamp="2020-05-16T15:58:41+05:30">
+  <testcase name="CoursesController GET #new returns a success response" time="0.047018">
+  </testcase>
+</testsuite>

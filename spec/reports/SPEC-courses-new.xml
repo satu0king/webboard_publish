@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="courses/new" tests="1" time="0.332773" failures="0" errors="1" skipped="0" timestamp="2020-05-16T15:58:43+05:30">
+  <testcase name="courses/new renders new course form" time="0.331571">
+    <error type="ActionView::Template::Error" message="Devise could not find the `Warden::Proxy` instance on your request environment....">
+Devise could not find the `Warden::Proxy` instance on your request environment.
+Make sure that your application is loading Devise and Warden as expected and that the `Warden::Manager` middleware is present in your middleware stack.
+If you are seeing this on one of your tests, ensure that your tests are either executing the Rails middleware stack or that your tests are using the `Devise::Test::ControllerHelpers` module to inject the `request.env['warden']` object for you. (ActionView::Template::Error)
+ActionView::Template::Error:
+Devise could not find the `Warden::Proxy` instance on your request environment.
+Make sure that your application is loading Devise and Warden as expected and that the `Warden::Manager` middleware is present in your middleware stack.
+If you are seeing this on one of your tests, ensure that your tests are either executing the Rails middleware stack or that your tests are using the `Devise::Test::ControllerHelpers` module to inject the `request.env['warden']` object for you.
+/Users/shreya/.rvm/gems/ruby-2.5.1/gems/devise-4.6.2/lib/devise/controllers/helpers.rb:143:in `warden'
+/Users/shreya/.rvm/gems/ruby-2.5.1/gems/devise-4.6.2/lib/devise/controllers/helpers.rb:126:in `current_user'
+./app/views/courses/_form.html.erb:29:in `block in _app_views_courses__form_html_erb___4275820846780268723_70145295412400'
+/Users/shreya/.rvm/gems/ruby-2.5.1/gems/haml-5.1.1/lib/haml/helpers/action_view_xss_mods.rb:7:in `with_output_buffer_with_haml_xss'
+/Users/shreya/.rvm/gems/ruby-2.5.1/gems/haml-5.1.1/lib/haml/helpers/action_view_mods.rb:48:in `capture_with_haml'
+./app/views/courses/_form.html.erb:1:in `_app_views_courses__form_html_erb___4275820846780268723_70145295412400'
+/Users/shreya/.rvm/gems/ruby-2.5.1/gems/haml-5.1.1/lib/haml/helpers/action_view_mods.rb:15:in `render'
+./app/views/courses/new.html.erb:4:in `_app_views_courses_new_html_erb___3770147524076455176_70145254553000'
+/Users/shreya/.rvm/gems/ruby-2.5.1/gems/haml-5.1.1/lib/haml/helpers/action_view_mods.rb:15:in `render'
+./spec/views/courses/new.html.erb_spec.rb:9:in `block (2 levels) in &lt;top (required)&gt;'
+------------------
+--- Caused by: ---
+Devise::MissingWarden:
+  Devise could not find the `Warden::Proxy` instance on your request environment.
+  Make sure that your application is loading Devise and Warden as expected and that the `Warden::Manager` middleware is present in your middleware stack.
+  If you are seeing this on one of your tests, ensure that your tests are either executing the Rails middleware stack or that your tests are using the `Devise::Test::ControllerHelpers` module to inject the `request.env['warden']` object for you.
+  /Users/shreya/.rvm/gems/ruby-2.5.1/gems/devise-4.6.2/lib/devise/controllers/helpers.rb:143:in `warden'    </error>
+  </testcase>
+</testsuite>

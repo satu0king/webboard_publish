@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="LecturesController PUT #update with invalid params" tests="1" time="0.011723" failures="0" errors="0" skipped="1" timestamp="2020-05-16T15:58:42+05:30">
+  <testcase name="LecturesController PUT #update with invalid params returns a success response (i.e. to display the 'edit' template) (PENDING)" time="0.009742">
+    <skipped/>
+  </testcase>
+</testsuite>

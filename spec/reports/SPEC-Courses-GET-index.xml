@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Courses GET /index" tests="1" time="0.634398" failures="0" errors="0" skipped="0" timestamp="2020-05-16T15:58:42+05:30">
+  <testcase name="Courses GET /index works! " time="0.63374">
+  </testcase>
+</testsuite>

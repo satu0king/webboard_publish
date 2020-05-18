@@ -1,0 +1,92 @@
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<%= provide(:title, "Index") %>
+<br>
+<h1 style="padding-left: 40%;">Course List</h1>
+
+<br>
+<%= form_tag(index_path, method: 'get') do %>
+<div id="inline" style="padding-left: 40%;">
+      <div style="width: 30%;">
+      <%= text_field_tag(:search, params[:search], class: "form-control mr-sm-2", placeholder: "Search") %>
+      </div>
+      <div style="float: right; padding-right: 64%;">
+      <button class="btn fa fa-search" style="font-size: 20px;background-color: DodgerBlue;color: white;"></button>
+    </div>
+  </div>
+<% end %>
+
+<br>
+
+<% @count = 0 %>
+<% if @list.any? %>
+<% if @flag ==  0%>
+  <h1> No Result Found </h1>
+<% else %>
+<% @list.each do |z|  %>
+  <div class="divcss" style="width:100px;">
+    <ul class="ulcss">
+      <li class="licss">
+        <% @count += 1 %>
+        <h1 class="aaaa"><%= @count %></h1>
+        <h4 class="aaa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= z.name %> : By <%= z.user.user_name %></h4>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "View Course", course_lectures_path(z), class: "btn btn-primary"%>
+        <p>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          No of lectures : <%= z.lectures.count %>
+        </p>
+        <% if user_signed_in? %>
+          <%= link_to " "+z.up_count.to_s, inc_path(course_id: z.id), method: :post, class: "fa fa-chevron-circle-up btn btn-default"  %>
+
+          <%= link_to " "+z.down_count.to_s, dec_path(course_id: z.id), method: :get, class: "fa fa-chevron-circle-down btn btn-default"  %>
+          <% end %>
+      </li>
+    </ul>
+  </div>
+<% end %>
+<% end %>
+<% end %>
+<% if @y == 1 %>
+<% @listings.each do |z|  %>
+  <div class="divcss" style="width:100px;">
+    <ul class="ulcss">
+      <li class="licss" style="border:0;">
+        <% @count += 1 %>
+        <div class="notification">
+        <h1 class="aaaa"><%= @count %></h1>
+        <h4 class="aaa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= z.name %> : By <%= z.user.user_name %>
+        <% if user_signed_in? and current_user == z.user %>
+    	 <%= link_to 'Change name', edit_course_path(z.id), class: "button is-primary" %>
+		<% end %>
+        </h4>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "View Course", course_lectures_path(z), class: "button is-dark"%>
+
+        <% if user_signed_in? and Follow.where(user_id: current_user.id, course_id: z.id).exists? %>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "Unfollow", user_unfollow_path(z.user, course_id: z.id), method: :delete, class: "button is-danger"%>
+        <% else %>
+        &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "Follow", user_new_follow_path(z.user, course_id: z.id), method: :post, class: "button is-info"%>
+
+        <% end %>
+        <p>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          No of lectures : <%= z.lectures.count %>
+        </p>
+        <p>
+
+          <% if user_signed_in? %>
+          <%= link_to " "+z.up_count.to_s, inc_path(course_id: z.id), method: :post, class: "fa fa-chevron-circle-up btn btn-default"  %>
+
+          <%= link_to " "+z.down_count.to_s, dec_path(course_id: z.id), method: :get, class: "fa fa-chevron-circle-down btn btn-default"  %>
+          <% end %>
+
+
+        </p>
+      </div>
+      </li>
+    </ul>
+  </div>
+
+
+<% end %>
+<% end %>

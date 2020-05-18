@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="UsersController routing" tests="8" time="0.122436" failures="7" errors="0" skipped="0" timestamp="2020-05-16T15:58:43+05:30">
+  <testcase name="UsersController routing routes to #index" time="0.015582">
+    <failure type="RSpec::Expectations::ExpectationNotMetError" message="No route matches &quot;/users&quot;">
+No route matches "/users" (RSpec::Expectations::ExpectationNotMetError)
+No route matches "/users"
+./spec/routing/users_routing_spec.rb:6:in `block (3 levels) in &lt;top (required)&gt;'    </failure>
+  </testcase>
+  <testcase name="UsersController routing routes to #new" time="0.01538">
+    <failure type="RSpec::Expectations::ExpectationNotMetError" message="No route matches &quot;/users/new&quot;">
+No route matches "/users/new" (RSpec::Expectations::ExpectationNotMetError)
+No route matches "/users/new"
+./spec/routing/users_routing_spec.rb:10:in `block (3 levels) in &lt;top (required)&gt;'    </failure>
+  </testcase>
+  <testcase name="UsersController routing routes to #show" time="0.007895">
+  </testcase>
+  <testcase name="UsersController routing routes to #edit" time="0.00796">
+    <failure type="RSpec::Expectations::ExpectationNotMetError" message="No route matches &quot;/users/1/edit&quot;">
+No route matches "/users/1/edit" (RSpec::Expectations::ExpectationNotMetError)
+No route matches "/users/1/edit"
+./spec/routing/users_routing_spec.rb:18:in `block (3 levels) in &lt;top (required)&gt;'    </failure>
+  </testcase>
+  <testcase name="UsersController routing routes to #create" time="0.0488">
+    <failure type="RSpec::Expectations::ExpectationNotMetError" message="The recognized options &lt;{&quot;controller&quot;=&gt;&quot;registrations&quot;, &quot;action&quot;=&gt;&quot;create&quot;}&gt; did not match &lt;{&quot;controller&quot;=&gt;&quot;users&quot;, &quot;action&quot;=&gt;&quot;create&quot;}&gt;, difference:....">
+The recognized options &lt;{"controller"=&gt;"registrations", "action"=&gt;"create"}&gt; did not match &lt;{"controller"=&gt;"users", "action"=&gt;"create"}&gt;, difference:.
+--- expected
++++ actual
+@@ -1 +1 @@
+-{"controller"=&gt;"users", "action"=&gt;"create"}
++{"controller"=&gt;"registrations", "action"=&gt;"create"}
+ (RSpec::Expectations::ExpectationNotMetError)
+The recognized options &lt;{"controller"=&gt;"registrations", "action"=&gt;"create"}&gt; did not match &lt;{"controller"=&gt;"users", "action"=&gt;"create"}&gt;, difference:.
+--- expected
++++ actual
+@@ -1 +1 @@
+-{"controller"=&gt;"users", "action"=&gt;"create"}
++{"controller"=&gt;"registrations", "action"=&gt;"create"}
+
+./spec/routing/users_routing_spec.rb:23:in `block (3 levels) in &lt;top (required)&gt;'    </failure>
+  </testcase>
+  <testcase name="UsersController routing routes to #update via PUT" time="0.007529">
+    <failure type="RSpec::Expectations::ExpectationNotMetError" message="No route matches &quot;/users/1&quot;">
+No route matches "/users/1" (RSpec::Expectations::ExpectationNotMetError)
+No route matches "/users/1"
+./spec/routing/users_routing_spec.rb:27:in `block (3 levels) in &lt;top (required)&gt;'    </failure>
+  </testcase>
+  <testcase name="UsersController routing routes to #update via PATCH" time="0.007411">
+    <failure type="RSpec::Expectations::ExpectationNotMetError" message="No route matches &quot;/users/1&quot;">
+No route matches "/users/1" (RSpec::Expectations::ExpectationNotMetError)
+No route matches "/users/1"
+./spec/routing/users_routing_spec.rb:31:in `block (3 levels) in &lt;top (required)&gt;'    </failure>
+  </testcase>
+  <testcase name="UsersController routing routes to #destroy" time="0.008486">
+    <failure type="RSpec::Expectations::ExpectationNotMetError" message="No route matches &quot;/users/1&quot;">
+No route matches "/users/1" (RSpec::Expectations::ExpectationNotMetError)
+No route matches "/users/1"
+./spec/routing/users_routing_spec.rb:35:in `block (3 levels) in &lt;top (required)&gt;'    </failure>
+  </testcase>
+</testsuite>

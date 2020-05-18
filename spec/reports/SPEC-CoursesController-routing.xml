@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CoursesController routing" tests="7" time="0.062051" failures="0" errors="0" skipped="0" timestamp="2020-05-16T15:58:43+05:30">
+  <testcase name="CoursesController routing routes to #new" time="0.009118">
+  </testcase>
+  <testcase name="CoursesController routing routes to #show" time="0.008959">
+  </testcase>
+  <testcase name="CoursesController routing routes to #edit" time="0.008406">
+  </testcase>
+  <testcase name="CoursesController routing routes to #create" time="0.007684">
+  </testcase>
+  <testcase name="CoursesController routing routes to #update via PUT" time="0.006272">
+  </testcase>
+  <testcase name="CoursesController routing routes to #update via PATCH" time="0.007433">
+  </testcase>
+  <testcase name="CoursesController routing routes to #destroy" time="0.010353">
+  </testcase>
+</testsuite>

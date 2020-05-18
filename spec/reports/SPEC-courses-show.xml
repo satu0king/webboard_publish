@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="courses/show" tests="1" time="0.015658" failures="0" errors="1" skipped="0" timestamp="2020-05-16T15:58:43+05:30">
+  <testcase name="courses/show renders attributes in &lt;p&gt;" time="0.014917">
+    <error type="ActiveRecord::RecordInvalid" message="Validation failed: User must exist, Name can't be blank">
+Validation failed: User must exist, Name can't be blank (ActiveRecord::RecordInvalid)
+ActiveRecord::RecordInvalid:
+Validation failed: User must exist, Name can't be blank
+./spec/views/courses/show.html.erb_spec.rb:5:in `block (2 levels) in &lt;top (required)&gt;'    </error>
+  </testcase>
+</testsuite>
