@@ -89,7 +89,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.5)
-    crass (1.0.4)
+    crass (1.0.6)
     devise (4.6.2)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -150,7 +150,7 @@ GEM
       activesupport (>= 4.0)
       logstash-event (~> 1.2.0)
       request_store
-    loofah (2.2.3)
+    loofah (2.5.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -169,7 +169,7 @@ GEM
     multipart-post (2.1.1)
     nested_form (0.3.2)
     nio4r (2.4.0)
-    nokogiri (1.10.3)
+    nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
     oauth (0.4.7)
     oauth-plugin (0.5.1)
